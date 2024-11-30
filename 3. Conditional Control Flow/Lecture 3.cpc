@@ -1,0 +1,36 @@
+// # Problem: Assign a letter grade based on a student's score: A (90-100), B (80-89), 
+// # C (70-79), D (60-69), F (below 60).
+
+
+DECLARE  Marks: INTEGER
+DECLARE  Grade: CHAR
+
+OUTPUT "Enter your marks"
+INPUT Marks
+
+IF Marks > 100 THEN
+    OUTPUT "Plz enter marks out of 100"
+ELSE
+    IF Marks >= 90 AND Marks <= 100 THEN
+        Grade <- "A"
+    ELSE
+        IF Marks >= 80 AND Marks < 90 THEN
+            Grade <- "B"
+        ELSE
+            IF Marks >= 70 AND Marks < 80 THEN
+                Grade <- "C"
+            ELSE
+                IF Marks >=60 AND Marks < 70 THEN
+                    Grade <- "D"
+                ELSE
+                    Grade <- "F"
+                ENDIF
+            ENDIF
+        ENDIF
+    ENDIF
+    
+    OUTPUT "Your Grade is", Grade
+ENDIF
+
+
+

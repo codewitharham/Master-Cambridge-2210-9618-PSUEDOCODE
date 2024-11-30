@@ -1,0 +1,54 @@
+// Question: Finding the Largest and Smallest Number
+
+
+// Asks the user to input a sequence of numbers (e.g., 10 numbers).
+// Compares the numbers to determine:
+//    * The largest number.
+//    * The smallest number.
+// Displays the largest and smallest numbers after all inputs are entered.
+
+// Requirements:
+// The program should allow the user to input numbers one by one.
+// The comparison should happen dynamically as the numbers are being entered.
+// Handle the first number as both the initial largest and smallest.
+// Include input validation to ensure only valid numbers are accepted.
+
+
+DECLARE smallest: INTEGER
+DECLARE largest: INTEGER
+DECLARE number_of_times: INTEGER
+DECLARE userInput: INTEGER
+
+OUTPUT "Enter How many inputs you are willing to give ?"
+INPUT number_of_times
+
+OUTPUT "Enter number"
+INPUT userInput
+
+smallest <- userInput
+largest  <- userInput
+
+FOR count <- 2 TO number_of_times
+
+    OUTPUT "Enter number"
+    INPUT userInput
+
+    IF largest < userInput THEN
+        largest <- userInput
+    ENDIF
+
+    IF smallest > userInput THEN
+        smallest <- userInput
+    ENDIF
+
+    OUTPUT "Largest Number is", largest
+    OUTPUT "Smallest Number is", smallest
+
+NEXT count
+
+OUTPUT "Largest Number is", largest
+OUTPUT "Smallest Number is", smallest
+
+
+
+

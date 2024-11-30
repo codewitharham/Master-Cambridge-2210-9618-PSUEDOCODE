@@ -1,0 +1,25 @@
+// Write a program to take input from the user and ask him/her how much distance 
+// him/her has travelled in a given time interval , then convert distance to Metre
+// and calculate speed at which user is travelling 
+
+DECLARE MetreDistance: INTEGER
+DECLARE distance_travelled: INTEGER
+DECLARE Time: INTEGER
+DECLARE Speed: REAL
+DECLARE time_in_seconds: INTEGER
+
+OUTPUT "Enter approximate distance travelled"
+INPUT distance_travelled
+
+MetreDistance <- distance_travelled * 1000
+
+OUTPUT "Enter approximate minutes travelled"
+INPUT Time
+
+time_in_seconds <- Time * 60
+
+Speed <- MetreDistance/time_in_seconds
+
+OUTPUT "The speed of travelling distance is: ",Speed, "m/s"
+
+

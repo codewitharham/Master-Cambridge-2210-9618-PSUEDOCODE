@@ -1,0 +1,11 @@
+// Write a program to calculate volume of cube
+
+DECLARE  Length : REAL
+DECLARE Volume: REAL
+
+OUTPUT "Enter Length of cube: "
+INPUT Length
+
+Volume <- Length * Length * Length
+ 
+OUTPUT "The Volume of cube is: ",Volume

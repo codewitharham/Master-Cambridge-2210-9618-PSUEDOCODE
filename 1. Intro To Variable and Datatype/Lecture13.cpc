@@ -1,0 +1,9 @@
+DECLARE Num1 : INTEGER
+DECLARE Square: INTEGER
+
+OUTPUT "Enter a Number"
+INPUT Num1
+
+Square <- Num1 * Num1
+
+OUTPUT "The Square of the given number is: ", Square

@@ -1,0 +1,32 @@
+// Write a program to calculate TOTAl and Average of marks of student who has given paper of 5 Subjects
+
+
+DECLARE Sub1 : INTEGER
+DECLARE Sub2 : INTEGER
+DECLARE Sub3 : INTEGER
+DECLARE Sub4 : INTEGER
+DECLARE Sub5 : INTEGER
+
+DECLARE Total: INTEGER
+DECLARE Average: REAL
+
+OUTPUT "Enter First subject marks: "
+INPUT Sub1
+
+OUTPUT "Enter Second subject marks: "
+INPUT Sub2
+
+OUTPUT "Enter Third subject marks: "
+INPUT Sub3
+
+OUTPUT "Enter Fourth subject marks: "
+INPUT Sub4
+
+OUTPUT "Enter Fifth subject marks: "
+INPUT Sub5
+
+Total <- Sub1 + Sub2 + Sub3 + Sub4 + Sub5
+Average <- Total / 5
+
+OUTPUT "The Students Total marks: ",Total
+OUTPUT "The Average is: ", Average

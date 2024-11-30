@@ -1,0 +1,18 @@
+DECLARE Age: INTEGER
+DECLARE gender: CHAR
+DECLARE D_O_B: DATE
+DECLARE Name: STRING
+
+OUTPUT "Enter your name: "
+INPUT Name
+
+OUTPUT "Enter Your Gender (M) for Male and (F) for Female: "
+INPUT gender
+
+OUTPUT "Enter your age: "
+INPUT Age
+
+OUTPUT "Enter your DOB (dd/mm/yyyy): "
+INPUT D_O_B
+
+OUTPUT Name, "is", Age, "years old. ",Name, "is a ",gender,"and he was born on ",D_O_B, "."

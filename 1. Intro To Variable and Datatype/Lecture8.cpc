@@ -1,0 +1,23 @@
+// Write a program to calculate simple interest
+// FORMULA : (principalAmmount * rate * time) / 100
+
+
+DECLARE principalAmmount: REAL
+DECLARE rate: REAL
+DECLARE time: REAL
+DECLARE bracketTotal: REAL
+DECLARE TotalAnswer: REAL
+
+OUTPUT "Enter pricipal ammount: "
+INPUT principalAmmount
+
+OUTPUT "Enter rate: "
+INPUT rate
+
+OUTPUT "Enter time in years: "
+INPUT time
+
+TotalAnswer <- ( principalAmmount * rate * time )/100 
+
+OUTPUT "SIMPLE INTEREST is: ",TotalAnswer
+

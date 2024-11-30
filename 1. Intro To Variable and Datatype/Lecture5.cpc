@@ -1,0 +1,15 @@
+// Write a progrm to calculate area of rectangle
+
+DECLARE length: INTEGER
+DECLARE WIDTH: INTEGER
+DECLARE Area: INTEGER
+
+OUTPUT "Enter your Length: "
+INPUT length
+
+OUTPUT "Enter your width: "
+INPUT WIDTH
+
+Area <- length * WIDTH
+
+OUTPUT "The Area of rectangle is: ",Area

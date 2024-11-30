@@ -1,0 +1,34 @@
+// # Problem: Suggest an activity based on the weather (e.g., Sunny - Go for a walk, Rainy - Read a book, Snowy - Build a snowman).
+
+// # CASE SENSITIVE CHECKING
+
+DECLARE weather : STRING
+DECLARE activity: STRING
+
+OUTPUT "hello, plz enter current weather"
+INPUT  weather
+
+OUTPUT TO_LOWER(weather) <> "sunny"
+
+IF (TO_LOWER(weather) <> "sunny") AND (TO_LOWER(weather) <> "rainy") 
+    AND (TO_LOWER(weather) <> "snowy") THEN
+
+    OUTPUT "Weather must be Sunny, Rainy or Snowy "
+    
+ENDIF
+
+IF TO_LOWER(weather) = "SUNNY" THEN
+    activity <- "Go For Walk"
+ENDIF
+
+
+IF TO_UPPER(weather) = "RAINY" THEN
+    activity <- "Read a Book"
+ENDIF
+
+
+IF TO_LOWER(weather) = "snowy" THEN
+    activity <- "Build a Snowman"
+ENDIF
+
+OUTPUT activity

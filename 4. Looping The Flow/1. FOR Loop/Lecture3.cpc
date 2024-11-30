@@ -1,0 +1,13 @@
+// # Problem: Print the multiplication table for a given number up to 10
+// # ouput e.g: 3 x 4 = 12
+
+DECLARE answer: INTEGER
+DECLARE userInput: INTEGER
+
+OUTPUT "Enter Number for which you want multiplication table "
+INPUT userInput
+
+FOR count <- 1 TO 10
+    answer <- userInput * count
+    OUTPUT userInput," X ",count," = ",answer
+NEXT count

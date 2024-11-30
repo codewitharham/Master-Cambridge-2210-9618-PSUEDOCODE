@@ -1,0 +1,35 @@
+// FOR LOOPS:
+
+//      FOR <count_identifier> <- start TO end
+            // <block of code>
+//      NEXT element
+
+// <count_identifier> is basically used to track the record number of iteration
+
+
+// QUESTION: Print numbers from 1 to 10
+
+// OUTPUT 1
+// OUTPUT 2
+// OUTPUT 3 
+// .
+// .
+// .
+// and so on ...
+
+DECLARE myStartingPoint : INTEGER
+DECLARE myEndingPointing: INTEGER
+
+myStartingPoint <- 0      // Start from 1
+myEndingPointing <- 10   //  END at 10
+
+FOR index <- myStartingPoint TO myEndingPointing
+    OUTPUT index     // Print the current value of index
+NEXT
+
+
+FOR index <- 1 TO 5
+    OUTPUT "hello"
+NEXT index
+
+

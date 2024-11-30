@@ -1,0 +1,31 @@
+// # Problem: Movie tickets are priced based on age: $12 for adults (18 and over), $8 for children. Everyone gets a $2 discount on Wednesday.
+
+
+DECLARE Price: INTEGER
+DECLARE Day: STRING
+DECLARE Age: INTEGER
+
+OUTPUT "Welcome to purchasing Movie Ticket"
+
+OUTPUT "Enter Day e.g (wed):"
+INPUT Day
+
+OUTPUT "Enter Age"
+INPUT Age
+
+IF Age >=18 THEN
+    Price <- 12
+ELSE
+    IF Age < 18 THEN
+        Price <- 8
+    ENDIF
+ENDIF
+
+IF (Day = "wednesday") OR (Day = "wed")   THEN
+    Price <- Price - 2
+ENDIF
+
+OUTPUT "The Total Price of ticket", Price
+
+
+

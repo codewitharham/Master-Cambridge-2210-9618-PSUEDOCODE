@@ -1,0 +1,39 @@
+//  ARITHEMATIC OPERATOR :
+//         * Addition( + )
+//         * Subtraction( - )
+//         * Divison( / )
+//         * multiplication ( * )
+//         * modulus ( MOD ) used for remainders
+//         * (DIV) => used for quotient
+
+
+DECLARE Num1 : INTEGER
+DECLARE Num2 : INTEGER
+
+DECLARE container_of_result: INTEGER
+
+OUTPUT "Enter Num1: "
+INPUT Num1
+
+OUTPUT "Enter Num2: "
+INPUT Num2
+
+
+container_of_result <- Num1 + Num2
+OUTPUT "Sum of Two Numbers is: ", container_of_result
+
+container_of_result <- Num1 - Num2
+OUTPUT "Difference of Two Numbers is: ", container_of_result
+
+container_of_result <- Num1 * Num2
+OUTPUT "Multiplication of Two Numbers is: ", container_of_result
+
+container_of_result <- Num1 / Num2
+OUTPUT "Division(/) of Two Numbers is: ", container_of_result
+
+container_of_result <- Num1 DIV Num2
+OUTPUT "Quotient(DIV) of Two Numbers is: ", container_of_result
+
+container_of_result <- Num1 MOD Num2
+OUTPUT "Remainder(MOD) of Two Numbers is: ", container_of_result
+

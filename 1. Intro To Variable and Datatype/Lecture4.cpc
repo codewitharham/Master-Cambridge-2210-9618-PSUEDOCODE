@@ -1,0 +1,22 @@
+//   ARITHEMATIC OPERATOR :
+//         * Addition( + )
+//         * Subtraction( - )
+//         * Divison( / )
+//         * multiplication ( * )
+//         * modulus ( MOD ) used for remainders
+//         * (DIV) => used for quotient
+
+//     Comparison Operators : used to evalute boolean result
+//         * Equal to ( = ):
+//         * Not equal to ( <> ):
+//         * Greater than ( > ):
+//         * Less than ( < ):
+//         * Greater than or equal to ( >= ):
+//         * Less than or equal to ( <= ):
+
+//     Logical Operators :
+//         * AND (and)
+//         * OR (or):
+//         * NOT (not):
+
+

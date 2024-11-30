@@ -1,0 +1,12 @@
+// SYNTAX of WRITING INPUT - STATEMENT
+
+// INPUT <identifier>
+
+DECLARE myNum: INTEGER
+
+OUTPUT "Enter number: "
+
+INPUT myNum
+
+OUTPUT "The entered number is: ", myNum
+

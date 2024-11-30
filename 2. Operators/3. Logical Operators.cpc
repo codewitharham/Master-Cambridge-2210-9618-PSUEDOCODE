@@ -1,0 +1,62 @@
+//    Logical Operators :
+//         * AND (and)
+//         * OR (or):
+//         * NOT (not):
+
+DECLARE X : BOOLEAN
+DECLARE Y : BOOLEAN
+
+DECLARE A: BOOLEAN
+DECLARE B: BOOLEAN
+
+DECLARE C: BOOLEAN
+DECLARE D: BOOLEAN
+
+DECLARE P: BOOLEAN
+DECLARE Q: BOOLEAN
+
+
+X <- FALSE
+Y <- FALSE
+
+A <- TRUE
+B <- FALSE
+
+P <- FALSE
+Q <- TRUE
+
+C <- TRUE
+D <- TRUE
+
+OUTPUT " OR Operations: "
+
+OUTPUT "A or B : ", A OR B
+OUTPUT "C or D : ", C OR D
+OUTPUT "P or Q : ", P OR Q
+OUTPUT "X or Y : ", X OR Y
+
+OUTPUT " "
+
+OUTPUT "AND Operations: "
+
+OUTPUT "A and B : ", A AND B
+OUTPUT "C and D : ", C AND D
+OUTPUT "P and Q : ", P AND Q
+OUTPUT "X and Y : ", X AND Y
+
+OUTPUT " "
+
+OUTPUT "NOT Operations: "
+
+OUTPUT "Not of (A AND B) : ", NOT(A AND B)
+OUTPUT "Not of (A OR B) : ", NOT(A OR B)
+
+OUTPUT "Not of (C AND D) : ", NOT(C AND D)
+OUTPUT "Not of (C OR D) : ", NOT(C OR D)
+
+OUTPUT "Not of (P AND Q) : ", NOT(P AND Q)
+OUTPUT "Not of (P OR Q) : ", NOT(P OR Q)
+
+OUTPUT "Not of (X AND Y) : ", NOT(X AND Y)
+OUTPUT "Not of (X OR Y) : ", NOT(X OR Y)
+

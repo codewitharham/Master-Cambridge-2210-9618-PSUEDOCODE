@@ -1,0 +1,60 @@
+//  Syntax of Writing Conditional Clauses:
+
+//      # IF statements without an else clause are written as follows:
+
+//            IF <condition> THEN
+//                <block of code>
+//            ENDIF
+
+
+//      # IF statements with an else clause are written as follows:
+
+//          IF condition THEN
+//              <block of code>
+//          ELSE
+//              <block of code>
+//          ENDIF
+
+
+
+// # Question1:
+// Classify a person's age group: Child (< 13), Teenager (13-19), Adult (20-59), Senior (60+).
+
+DECLARE age: INTEGER
+
+OUTPUT "Enter your age: "
+INPUT age
+
+// APPROACH 1
+
+IF age < 13 THEN
+    OUTPUT "You're a Child "
+ELSE
+    IF (age >= 13) AND (age <= 19) THEN
+        OUTPUT "You're a Teenager "
+    ELSE
+        IF (age >= 20) AND (age <= 59) THEN
+            OUTPUT "You're an Adult"
+        ELSE
+            IF age >= 60 THEN
+                OUTPUT "You're a Senior"
+            ENDIF
+        ENDIF
+    ENDIF
+ENDIF
+
+// APPROACH 2
+IF age < 13 THEN
+    OUTPUT "You're a Child "
+ELSE
+    IF (age >= 13) AND (age <= 19) THEN
+        OUTPUT "You're a Teenager "
+    ELSE
+        IF (age >= 20) AND (age <= 59) THEN
+            OUTPUT "You're an Adult"
+        ELSE
+            OUTPUT "You're a Senior"
+        ENDIF
+    ENDIF
+ENDIF
+

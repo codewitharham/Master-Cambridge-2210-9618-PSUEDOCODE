@@ -1,0 +1,19 @@
+// Write a progrm to calculate area of CIRCLE
+
+// SYNTAX of DEFINING a Constant
+
+// CONSTANT <identifier> = <value>
+
+CONSTANT Pi = 22/7
+DECLARE area: REAL
+DECLARE radius: REAL
+
+OUTPUT "Enter radius of circle: "
+INPUT radius
+
+area <- Pi * radius * radius
+
+OUTPUT "The area of Circle is: ", INT(area)
+
+
+

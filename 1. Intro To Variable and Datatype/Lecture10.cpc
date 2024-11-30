@@ -1,0 +1,24 @@
+// Write a program to swap two numbers, a and b
+// e.g a=6 , b=8 ==> << SWAP >> a=8 , b=6
+
+DECLARE X: INTEGER
+DECLARE Y: INTEGER
+DECLARE Z: INTEGER
+
+OUTPUT "Enter number 1: "
+INPUT X // 6
+
+OUTPUT "Enter number 2: "
+INPUT Y // 8
+
+
+// (Y <- X) // value is changed from 8 to 6 , this is called updation of variable
+// X <- Y 
+
+//  SWAPPING
+Z <- Y // keeping track of record of prev value 
+Y <- X 
+X <- Z 
+
+OUTPUT "X: ", X
+OUTPUT "Y: ", Y

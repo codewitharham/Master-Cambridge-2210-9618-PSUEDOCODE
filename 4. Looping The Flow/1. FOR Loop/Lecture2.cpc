@@ -1,0 +1,25 @@
+// # Problem: Calculate the sum of even numbers up to a given number n.
+
+DECLARE userInput: STRING
+DECLARE sum_of_even: INTEGER
+DECLARE StartingPoint: INTEGER
+DECLARE EndingPoint: INTEGER
+
+
+OUTPUT "Enter Number till you want sum of even number"
+INPUT userInput
+
+StartingPoint <- 1
+EndingPoint <- userInput
+sum_of_even <- 0
+
+
+FOR count <- StartingPoint TO EndingPoint
+    
+    IF ( (count MOD 2) = 0) THEN
+        sum_of_even <- sum_of_even + count
+        OUTPUT "Sum of Even Numbers is",sum_of_even
+    ENDIF
+
+NEXT count
+

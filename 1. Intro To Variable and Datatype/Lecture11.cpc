@@ -1,0 +1,41 @@
+DECLARE A: INTEGER
+DECLARE B: INTEGER
+DECLARE C: INTEGER
+DECLARE D: INTEGER
+DECLARE Temp: INTEGER
+
+
+OUTPUT "Enter num1: "
+INPUT A
+
+OUTPUT "Enter num2: "
+INPUT B
+
+OUTPUT "Enter num3: "
+INPUT C
+
+OUTPUT "Enter num4: "
+INPUT D
+
+// Temp1 <- C
+// Temp2 <- D
+
+// D <- A
+// A <- Temp2
+
+// C <- B
+// B <- Temp1
+
+
+Temp <- A
+A <- B
+B <- C
+C <- D
+D <- Temp
+
+
+OUTPUT "A: ", A
+OUTPUT "B: ", B
+OUTPUT "C: ", C
+OUTPUT "D: ", D
+
