@@ -1,0 +1,19 @@
+DECLARE str3 : STRING
+DECLARE str4 : STRING
+DECLARE result3 : STRING
+DECLARE result4 : STRING
+DECLARE i : INTEGER
+
+str3 <- "Hello"
+str4 <- "World"
+result3 <- ""
+
+// Repeat the string 5 times
+FOR i <- 1 TO 5
+    result3 <- result3 & str3
+NEXT i
+
+result4 <- result3 & " " & str4
+
+OUTPUT result3    // Output: HelloHelloHelloHelloHello
+OUTPUT result4    // Output: HelloHelloHelloHelloHello World

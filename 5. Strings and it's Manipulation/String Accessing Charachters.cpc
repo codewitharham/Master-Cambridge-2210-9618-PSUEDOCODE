@@ -1,0 +1,35 @@
+DECLARE str5 : STRING
+str5 <- "Hello World"
+
+// Access characters using LEFT, RIGHT and MID functions
+
+
+OUTPUT LEFT(str5, 5)   
+
+OUTPUT RIGHT(str5, 5)   
+
+
+OUTPUT MID(str5, 1, 1)
+OUTPUT MID(str5, 2, 1)  // Output: e
+OUTPUT MID(str5, 3, 1)  // Output: l
+OUTPUT MID(str5, 4, 1)  // Output: l
+OUTPUT MID(str5, 5, 1)  // Output: o
+
+OUTPUT " "
+
+// Access characters from the end
+
+OUTPUT MID(str5, LENGTH(str5), 1)     // Output: d
+OUTPUT MID(str5, LENGTH(str5) - 1, 1) // Output: r
+OUTPUT MID(str5, LENGTH(str5) - 2, 1) // Output: l
+OUTPUT MID(str5, LENGTH(str5) - 3, 1) // Output: o
+OUTPUT MID(str5, LENGTH(str5) - 4, 1) // Output: w
+
+OUTPUT MID(str5, LENGTH(str5) - 5, 1)     // Output: <space>
+
+OUTPUT MID(str5, LENGTH(str5) - 6, 1) // Output: o
+OUTPUT MID(str5, LENGTH(str5) - 7, 1) // Output: l
+OUTPUT MID(str5, LENGTH(str5) - 8, 1) // Output: l
+OUTPUT MID(str5, LENGTH(str5) - 9, 1) // Output: e
+OUTPUT MID(str5, LENGTH(str5) - 10, 1) // Output: H
+

@@ -1,0 +1,69 @@
+DECLARE str1 : STRING
+DECLARE step_result1 : STRING
+DECLARE str2 : STRING
+DECLARE step_result2 : STRING
+DECLARE str3 : STRING
+DECLARE step_result3 : STRING
+DECLARE str4 : STRING
+DECLARE step_result4 : STRING
+
+// Initialize strings
+str1 ← "Hello"
+str2 ← "Programming"
+str3 ← "Cambridge"
+str4 ← "ABCDEFGHIJKLM"
+
+
+
+
+// Extract every second character from "Hello"
+step_result1 ← ""
+FOR i ← 1 TO LENGTH(str1) STEP 2
+    step_result1 ← step_result1 & MID(str1, i, 1)
+NEXT i
+OUTPUT "Step 2 result for 'Hello': " & step_result1   // Output: Hlo
+
+
+
+
+
+// Extract every third character from "Programming"
+step_result2 ← ""
+FOR i ← 1 TO LENGTH(str2) STEP 3
+    step_result2 ← step_result2 & MID(str2, i, 1)
+NEXT i
+OUTPUT "Step 3 result for 'Programming': " & step_result2   // Output: Pgmg
+
+
+
+
+
+// Extract every fourth character from "Cambridge"
+step_result3 ← ""
+FOR i ← 1 TO LENGTH(str3) STEP 4
+    step_result3 ← step_result3 & MID(str3, i, 1)
+NEXT i
+OUTPUT "Step 4 result for 'Cambridge': " & step_result3   // Output: Crg
+
+
+
+
+
+// Extract characters with step size 1 (all characters) from "ABCDEFGHIJKLM"
+step_result4 ← ""
+FOR i ← 1 TO LENGTH(str4) STEP 1
+    step_result4 ← step_result4 & MID(str4, i, 1)
+NEXT i
+OUTPUT "Step 1 result for 'ABCDEFGHIJKLM': " & step_result4   // Output: ABCDEFGHIJKLM
+
+
+
+
+
+// Additional example: Extract characters with step size 5 from "ABCDEFGHIJKLM"
+DECLARE step_result5 : STRING
+step_result5 ← ""
+FOR i ← 1 TO LENGTH(str4) STEP 5
+    step_result5 ← step_result5 & MID(str4, i, 1)
+NEXT i
+OUTPUT "Step 5 result for 'ABCDEFGHIJKLM': " & step_result5   // Output: AFK

@@ -1,0 +1,17 @@
+DECLARE a: STRING
+DECLARE b: INTEGER
+DECLARE i: INTEGER
+DECLARE CurrentCharacter: STRING
+
+INPUT a
+b <- LENGTH(a)
+
+// Loop through the string and extract each character
+
+FOR index <- 1 TO b
+    CurrentCharacter <- MID(a, index, 1)
+    OUTPUT CurrentCharacter
+NEXT
+
+
+// This approach dynamically handles strings of any length and avoids manually declaring variables for each character.

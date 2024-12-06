@@ -1,0 +1,15 @@
+DECLARE str1 : STRING
+DECLARE str2 : STRING
+DECLARE result : STRING
+DECLARE result2 : STRING
+
+str1 <- "Hello"
+str2 <- "World"
+
+// Concatenate(JOIN) strings using the & operator
+
+result <- str1 & str2
+result2 <- "Rayyan" & "Ahmed"
+
+OUTPUT result   // Output: HelloWorld
+OUTPUT result2  // Output: RayyanAhmed

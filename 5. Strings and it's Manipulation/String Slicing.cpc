@@ -1,0 +1,14 @@
+DECLARE str5 : STRING
+str5 <- "Hello World"
+
+
+// Slicing using LEFT and MID functions
+OUTPUT LEFT(str5, 5)  // Output: Hello
+OUTPUT RIGHT(str5, 3)
+
+OUTPUT MID(str5, 1, 3)  // Output: Hel
+OUTPUT MID(str5, 3, LENGTH(str5) - 2) // Output: llo
+OUTPUT str5    // Output: Hello
+
+// Slicing with negative indices
+OUTPUT MID(str5, 2, 3)           // Output: ell

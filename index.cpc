@@ -1,13 +1,11 @@
-FOR i <- 1 TO 5
+DECLARE string1 : STRING
+DECLARE string2 : STRING
+DECLARE string3 : STRING
+DECLARE string4 : STRING
 
-    OUTPUT "outer loop", i
-  
 
-    FOR j <- 1 TO i
-        OUTPUT "inner loop", j
-        OUTPUT " "
-    NEXT 
 
-    
+// Using double quotes
+string2 <-"Hello, World!"
+OUTPUT string2
 
-NEXT 

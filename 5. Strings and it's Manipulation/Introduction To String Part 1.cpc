@@ -1,0 +1,39 @@
+// Declare variables to hold the string, its length, and individual characters
+
+DECLARE a: STRING   // The input string
+DECLARE b: STRING   // The length of the string as a STRING
+
+DECLARE FirstCharacter: STRING
+DECLARE SecondCharacter: STRING
+DECLARE ThirdCharacter: STRING
+DECLARE FourthCharacter: STRING
+DECLARE FifthCharacter: STRING
+DECLARE SixthCharacter: STRING
+
+// Assign the string "rayyan" to the variable `a`
+a <- "rayyan"
+
+
+// Extract individual characters from the string `a` using the MID function
+
+// MID(string, start, length): Extracts a substring of the specified length starting from the given position
+FirstCharacter <- MID(a, 1, 1)  // Extract the first character of "rayyan", which is "r"
+SecondCharacter <- MID(a, 2, 1) // Extract the second character, "a"
+ThirdCharacter <- MID(a, 3, 1)  // Extract the third character, "y"
+FourthCharacter <- MID(a, 4, 1) // Extract the fourth character, "y"
+FifthCharacter <- MID(a, 5, 1)  // Extract the fifth character, "a"
+SixthCharacter <- MID(a, 6, 1)  // Extract the sixth character, "n"
+
+// Get the length of the string `a` using the LENGTH function and store it in `b`
+b <- LENGTH(a)
+
+// Output the length of the string
+OUTPUT b   // Expected output: 6
+
+// Output each character of the string individually
+OUTPUT FirstCharacter   // Expected output: r
+OUTPUT SecondCharacter  // Expected output: a
+OUTPUT ThirdCharacter   // Expected output: y
+OUTPUT FourthCharacter  // Expected output: y
+OUTPUT FifthCharacter   // Expected output: a
+OUTPUT SixthCharacter   // Expected output: n
