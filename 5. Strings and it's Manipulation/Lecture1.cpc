@@ -19,13 +19,3 @@ FOR index <- LENGTH(name) TO 1 STEP -1
 NEXT 
 
 OUTPUT reversedStr
-// arham
-
-// "" + m => "m"
-// "m" + "a" => "ma"
-
-// "" + m => "m"
-// a + "m" => "am"
-// h + "am" => "ham"
-// r + "ham" => rham
-// a + "rham" => arham 

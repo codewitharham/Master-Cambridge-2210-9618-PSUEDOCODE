@@ -1,6 +1,5 @@
-userInput = input("Enter name: ")
-reversedStr = ""
+current_str = ""
 
-for index in range(0, 10):
-    reversedStr = reversedStr + userInput[index]
-    print(reversedStr)
+for row in range(0, 5):
+    for column in range(0, row):
+        current_str = current_str + " * "

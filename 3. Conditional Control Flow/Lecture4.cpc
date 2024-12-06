@@ -8,7 +8,6 @@ DECLARE activity: STRING
 OUTPUT "hello, plz enter current weather"
 INPUT  weather
 
-OUTPUT TO_LOWER(weather) <> "sunny"
 
 IF (TO_LOWER(weather) <> "sunny") AND (TO_LOWER(weather) <> "rainy") 
     AND (TO_LOWER(weather) <> "snowy") THEN

@@ -1,0 +1,25 @@
+//  Finding the Frequency of a given Character in a String
+
+DECLARE word: STRING
+DECLARE character: STRING
+DECLARE char_count: INTEGER
+DECLARE sub_str: STRING
+
+OUTPUT "Enter your word"
+INPUT word
+
+OUTPUT "Enter your character for which you want count"
+INPUT character
+
+char_count <- 0
+
+FOR index_position <- 1 TO LENGTH(word)
+    
+    sub_str <- MID(word, index_position, 1)
+
+    IF character = sub_str THEN
+        char_count <- char_count + 1
+    ENDIF
+NEXT
+
+OUTPUT "Frequency of your given character:",character, "is", char_count

@@ -1,33 +1,13 @@
-DECLARE a: STRING
-DECLARE b: STRING
-DECLARE FirstCharacter: STRING
-DECLARE SecondCharacter: STRING
-DECLARE ThirdCharacter: STRING
-DECLARE FourthCharacter: STRING
-DECLARE FifthCharacter: STRING
-DECLARE SixthCharacter: STRING
+FOR i <- 1 TO 5
 
-a <- "rayyan"
+    OUTPUT "outer loop", i
+  
 
-// MID(string, start, length)
+    FOR j <- 1 TO i
+        OUTPUT "inner loop", j
+        OUTPUT " "
+    NEXT 
 
-FirstCharacter <- MID(a, 1, 1) 
-SecondCharacter <- MID(a, 2, 1)
-ThirdCharacter <- MID(a, 3, 1) 
-FourthCharacter <- MID(a, 4, 1) 
-FifthCharacter <- MID(a, 5, 1) 
-SixthCharacter <- MID(a, 6, 1)  
+    
 
-b <- LENGTH(a)
-
-OUTPUT b
-
-
-OUTPUT FirstCharacter
-OUTPUT SecondCharacter
-OUTPUT ThirdCharacter
-OUTPUT FourthCharacter
-OUTPUT FifthCharacter
-OUTPUT SixthCharacter
-
-
+NEXT 

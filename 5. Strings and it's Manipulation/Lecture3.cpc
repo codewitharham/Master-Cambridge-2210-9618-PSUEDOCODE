@@ -1,0 +1,28 @@
+
+
+DECLARE userInput: INTEGER
+DECLARE current_str: STRING
+
+
+OUTPUT "Enter an integer"
+INPUT userInput
+
+IF userInput <= 0 THEN
+    OUTPUT "Please enter a positive integer"
+ENDIF
+
+current_str <- " "
+
+FOR row <- 1 TO userInput
+
+    current_str <- " "
+
+    FOR column <- 1 TO row
+        current_str <- current_str & " * "
+    NEXT
+
+    OUTPUT current_str
+
+NEXT
+
+
