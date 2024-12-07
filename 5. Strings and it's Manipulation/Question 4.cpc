@@ -1,0 +1,35 @@
+DECLARE Left_Pointer: INTEGER
+DECLARE Right_Pointer: INTEGER
+DECLARE Word: STRING
+DECLARE Word_Length: INTEGER
+DECLARE count: INTEGER
+DECLARE Is_Palindrome: BOOLEAN
+
+OUTPUT "Enter word "
+INPUT Word
+
+Word_Length <- LENGTH(Word)
+
+Left_Pointer <- 1
+Right_Pointer <- Word_Length
+count <- 0
+
+Is_Palindrome <- FALSE
+
+WHILE Left_Pointer <= Right_Pointer AND count <= Word_Length
+    
+    IF MID(Word, Left_Pointer, 1) = MID(Word, Right_Pointer, 1) THEN
+        Left_Pointer <- Left_Pointer + 1
+        Right_Pointer <- Right_Pointer - 1
+        Is_Palindrome <- TRUE
+    ENDIF
+    
+    count <- count + 1
+
+ENDWHILE
+
+IF Is_Palindrome = TRUE THEN
+    OUTPUT "The word is palindrome"
+ELSE
+    OUTPUT "The  word is not palindrome"
+ENDIF

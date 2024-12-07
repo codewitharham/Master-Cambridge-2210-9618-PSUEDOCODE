@@ -1,0 +1,11 @@
+// # Problem: Keep asking the user for input until they enter a number between 1 and 10.
+
+DECLARE userInput: INTEGER
+
+OUTPUT "Enter Number"
+INPUT userInput
+
+WHILE userInput <= 1 OR userInput >= 10
+    OUTPUT "Enter Number"
+    INPUT userInput
+ENDWHILE

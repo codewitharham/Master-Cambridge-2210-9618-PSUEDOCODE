@@ -1,11 +1,33 @@
-DECLARE string1 : STRING
-DECLARE string2 : STRING
-DECLARE string3 : STRING
-DECLARE string4 : STRING
+DECLARE Word : STRING
+DECLARE Word_Length : INTEGER
+DECLARE First_Half_Length : INTEGER
+DECLARE Left_Side : STRING
+DECLARE Right_Side : STRING
+DECLARE Is_Palindrome : BOOLEAN
+DECLARE i: INTEGER
+
+OUTPUT "Enter your word"
+INPUT Word
+
+
+Word_Length <- LENGTH(Word)
+
+First_Half_Length <- Word_Length DIV 2
+Right_Side <- ""
+Left_Side <- ""
 
 
 
-// Using double quotes
-string2 <-"Hello, World!"
-OUTPUT string2
 
+// Debugging Output
+OUTPUT "Left Side: " & Left_Side
+OUTPUT "Right Side: " & Right_Side
+
+// Compare the two halves
+IF Left_Side = Right_Side THEN
+    Is_Palindrome <- TRUE
+    OUTPUT "The word is a palindrome."
+ELSE
+    Is_Palindrome <- FALSE
+    OUTPUT "The word is not a palindrome."
+ENDIF
