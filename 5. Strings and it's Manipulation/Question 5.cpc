@@ -1,0 +1,25 @@
+// Write a program that takes a string and returns a new string where each character is repeated twice. For example, the input "abc" should return "aabbcc
+
+DECLARE UserString: STRING
+DECLARE Temp: STRING
+DECLARE Str_Char: STRING
+DECLARE repeats : INTEGER 
+
+
+OUTPUT "Enter the String "
+INPUT UserString
+
+OUTPUT "Enter number of repeats you want in string"
+INPUT repeats
+
+Str_Char <- ""
+Temp <- ""
+
+FOR index <- 1 TO LENGTH(UserString)
+    Str_Char <- MID(UserString, index, 1)
+
+    Temp <- Temp & Str_Char & Str_Char & Str_Char
+
+NEXT index
+
+OUTPUT Temp

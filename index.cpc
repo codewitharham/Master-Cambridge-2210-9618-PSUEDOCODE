@@ -1,33 +1,23 @@
-DECLARE Word : STRING
-DECLARE Word_Length : INTEGER
-DECLARE First_Half_Length : INTEGER
-DECLARE Left_Side : STRING
-DECLARE Right_Side : STRING
-DECLARE Is_Palindrome : BOOLEAN
-DECLARE i: INTEGER
+FUNCTION StringClean(InString : STRING) RETURNS STRING
 
-OUTPUT "Enter your word"
-INPUT Word
+ DECLARE NextChar : CHAR
+ DECLARE OutString : STRING
+ DECLARE Counter : INTEGER
 
+ OutString <- ""
 
-Word_Length <- LENGTH(Word)
+ FOR Counter <- 1 TO LENGTH(InString)
+    NextChar <- MID(InString, Counter, 1)
+    NextChar <- LCASE(NextChar)
+ 
+    IF NOT((NextChar < 'a') OR (NextChar > 'z')) THEN
+        OutString <- OutString & NextChar
+    ENDIF
+ 
+ NEXT Counter
 
-First_Half_Length <- Word_Length DIV 2
-Right_Side <- ""
-Left_Side <- ""
+ RETURN OutString
 
+ENDFUNCTION
 
-
-
-// Debugging Output
-OUTPUT "Left Side: " & Left_Side
-OUTPUT "Right Side: " & Right_Side
-
-// Compare the two halves
-IF Left_Side = Right_Side THEN
-    Is_Palindrome <- TRUE
-    OUTPUT "The word is a palindrome."
-ELSE
-    Is_Palindrome <- FALSE
-    OUTPUT "The word is not a palindrome."
-ENDIF
+OUTPUT StringClean("arham")
