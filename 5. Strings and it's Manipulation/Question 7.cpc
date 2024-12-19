@@ -1,0 +1,27 @@
+// The Variables P and Q are used to store data in program. P Stores String, Q Stores a Character
+
+
+// Write pseudocode Algorithm to:
+// * convert P to UPPERCASE
+// * find the position of Q in the String P ( SEARCHING )
+// * Store the position of Q in the variable POSITION
+
+
+DECLARE P : STRING
+DECLARE Q : CHAR
+DECLARE Position : INTEGER
+DECLARE R : CHAR
+
+P <- "The World"
+Q <- 'W'
+
+P <- TO_UPPER(P)
+
+FOR index <- 1 TO LENGTH(P)
+    R <- MID(P, index, 1)
+    IF R = Q THEN
+        Position <- index
+    ENDIF
+NEXT
+
+OUTPUT "The position of W is:", Position

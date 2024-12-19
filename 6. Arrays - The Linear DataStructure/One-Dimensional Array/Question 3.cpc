@@ -1,0 +1,14 @@
+DECLARE userInput : INTEGER
+DECLARE Numbers : ARRAY[1:10] OF INTEGER
+
+Numbers <- [10 ,12 ,56 ,48 ,13 ,89 ,65 ,90 ,79 ,52]
+
+OUTPUT "Enter number you want to search"
+INPUT userInput
+
+FOR index <- 1 TO 10
+    IF userInput = Numbers[index] THEN
+        OUTPUT "The given numbers is located at",index
+    ENDIF
+    
+NEXT index

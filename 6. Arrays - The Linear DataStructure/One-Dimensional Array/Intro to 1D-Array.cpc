@@ -1,0 +1,48 @@
+// A 1D array can be visualized as a row, where elements are stored sequentially in memory.
+
+// Syntax to declare a single-dimensional array:
+// DECLARE identifier : ARRAY[lowerBound:upperBound] OF <dataType>
+
+// The dimensions of a 1D array are defined using a range:
+// lowerBound : upperBound -> Specifies the number of elements the array can hold.
+
+// Example declaration of a 1D array to store marks:
+DECLARE marks : ARRAY[1:10] OF INTEGER  // An array to store 10 integer values, indexed from 1 to 10.
+
+DECLARE studentsList : ARRAY[1:10] OF STRING  // An array to store 10 Strings values, indexed from 1 to 10.
+
+// Initializing the elements of the `marks` array with sample data:
+marks[1] <- 10
+marks[2] <- 40
+marks[3] <- 50
+marks[4] <- 60
+marks[5] <- 90
+marks[6] <- 43
+marks[7] <- 73
+marks[8] <- 89
+marks[9] <- 92
+marks[10] <- 5
+
+// Initializing the elements of the `studentsList` array with sample data:
+studentsList[1] <- "John"
+studentsList[2] <- "Emma"
+studentsList[3] <- "Michael"
+studentsList[4] <- "Sophia"
+studentsList[5] <- "Daniel"
+studentsList[6] <- "Olivia"
+studentsList[7] <- "James"
+studentsList[8] <- "Isabella"
+studentsList[9] <- "William"
+studentsList[10] <- "Ava"
+
+//Displaying the data in array:
+
+OUTPUT marks
+OUTPUT studentsList
+
+
+// Accessing individual Data and Display them
+
+FOR index <- 10 TO 1 STEP -1
+    OUTPUT studentsList[index],"has scored",marks[index],"marks"
+NEXT index

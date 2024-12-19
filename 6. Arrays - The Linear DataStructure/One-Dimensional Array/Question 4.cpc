@@ -1,0 +1,29 @@
+// REVERSE ORDER OF Entire Array Items
+
+
+DECLARE my_array : ARRAY[1:9] OF INTEGER
+DECLARE FrontPointer : INTEGER
+DECLARE EndPointer : INTEGER
+DECLARE Temp : INTEGER
+
+my_array <- [10 ,12 ,13 ,6 ,7 ,8 ,9 ,20 ,22]
+
+OUTPUT my_array
+
+FrontPointer <- 1
+EndPointer <- 9 
+
+WHILE FrontPointer <= EndPointer
+    Temp <- my_array[FrontPointer]
+    my_array[FrontPointer] <- my_array[EndPointer]
+    my_array[EndPointer] <- Temp
+
+    FrontPointer <- FrontPointer + 1
+    EndPointer <- EndPointer - 1
+    
+ENDWHILE
+
+
+OUTPUT my_array
+
+

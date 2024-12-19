@@ -1,0 +1,34 @@
+// Example declaration of a 1D array to store marks and student names:
+DECLARE marks : ARRAY[1:10] OF INTEGER      // An array to store 10 integer values.
+DECLARE studentsList : ARRAY[1:10] OF STRING // An array to store 10 string values.
+DECLARE Threshold: INTEGER
+DECLARE count: INTEGER
+
+// Initializing the arrays with sample data.
+marks <- [10, 56, 63, 21, 42, 52, 38, 89, 91, 99]
+studentsList <- ["John", "Emma", "Michael", "Sophia", "Daniel", "Olivia", "James", "Isabella", "William", "Ava"]
+
+// Displaying the data in arrays:
+OUTPUT "Marks Array: ", marks
+OUTPUT "Students List: ", studentsList
+
+// Accessing and displaying individual data from the arrays:
+FOR index <- 1 TO 10
+    OUTPUT studentsList[index], " has scored ", marks[index], " marks."
+NEXT index
+
+// Finding the students who scored above the threshold
+
+OUTPUT "Enter the threshold"
+INPUT Threshold
+
+count <- 0
+
+FOR index <- 1 TO 10
+    IF marks[index] > Threshold THEN
+        OUTPUT studentsList[index]
+        count <- count + 1
+    ENDIF    
+NEXT index
+
+OUTPUT "Number of students passed is", count
