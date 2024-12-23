@@ -1,0 +1,31 @@
+DECLARE sales : ARRAY[1:7] OF INTEGER
+
+sales <- [150, 200, 170, 190, 220, 210, 180]
+
+DECLARE totalSales : INTEGER 
+DECLARE averageSales : REAL
+DECLARE highestSales : INTEGER
+DECLARE dayOfHighestSales : INTEGER
+
+totalSales <- 0
+highestSales <- sales[1]
+dayOfHighestSales <- 1
+
+// Calculate total sales and find the highest sales
+FOR index <- 1 TO 7
+    totalSales <- totalSales + sales[index]
+    
+    IF sales[index] > highestSales THEN
+        highestSales <- sales[index]
+        dayOfHighestSales <- index
+    ENDIF
+    
+NEXT index
+
+// Calculate average sales
+averageSales <- totalSales / 7
+
+// Output results
+OUTPUT "Total Sales:", totalSales
+OUTPUT "Average Sales:", averageSales
+OUTPUT "Highest Sales:", highestSales, "on Day", dayOfHighestSales

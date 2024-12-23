@@ -1,0 +1,38 @@
+// Frequency Count
+
+// Write a program to find how many times each element appears in an array , [3,5,3,7,9,7,5]
+
+DECLARE Numbers : ARRAY[1:7] OF INTEGER
+DECLARE Visited : ARRAY[1:7] OF INTEGER
+DECLARE Count : INTEGER
+
+Numbers <- [3, 5, 3, 7, 9, 7, 5]
+
+FOR index <- 1 TO 7
+    Visited[index] <- 0    
+NEXT index
+
+FOR j <- 1 TO 7
+    Count <- 1
+    IF Visited[j] = 0 THEN
+        FOR index <- j + 1 TO 7
+            IF Numbers[j] = Numbers[index] THEN
+                Count <- Count + 1
+                Visited[index] <- -1 // mark for visited
+            ENDIF
+        NEXT index
+        Visited[j] <- Count
+    ENDIF
+NEXT j
+
+FOR count <- 1 TO 7
+    IF Visited[count] > 0 THEN
+        OUTPUT Numbers[count], "is repeated", Visited[count]
+    ENDIF
+NEXT count
+
+
+
+
+
+

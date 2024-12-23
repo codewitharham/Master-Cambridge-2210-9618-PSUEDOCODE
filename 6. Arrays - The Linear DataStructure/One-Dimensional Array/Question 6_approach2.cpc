@@ -1,0 +1,20 @@
+DECLARE Numbers : ARRAY[1:7] OF INTEGER
+DECLARE Visited : ARRAY[1:7] OF BOOLEAN
+DECLARE Count : INTEGER
+
+Numbers <- [3, 5, 3, 7, 9, 7, 5]
+
+FOR j <- 1 TO 7
+
+    Count <- 1
+    IF Visited[i] = FALSE THEN
+
+        FOR i <- j + 1 TO 7
+            IF Numbers[i] = Numbers[j] THEN
+                Count <- Count + 1
+                Visited[j] <- TRUE
+            ENDIF
+        NEXT j
+        OUTPUT Numbers[j], "repeated", Count, "times"
+    ENDIF
+NEXT j
