@@ -1,0 +1,89 @@
+// A 2D array (also called a matrix) is an array with rows and columns.
+
+// Example Structure:
+//   0   1   4   5
+//   1   2   3   6 
+//   5   7   8   7
+
+// Each element is accessed using two indices:
+// * ROW index 
+// * COLUMN index
+
+// --------------------------------------------------
+// DECLARATION OF TWO-DIMENSIONAL ARRAY
+
+// Syntax: DECLARE <identifier> : ARRAY[<ROWS>, <COLUMNS>] OF <DATATYPE>
+
+// Creating a 3x4 integer matrix
+
+DECLARE matrix_1 : ARRAY[2:3, 1:4] OF INTEGER
+
+// --------------------------------------------------
+// OUTPUT matrix_1 (Initially all elements are zero)
+
+OUTPUT "Initial matrix_1:"
+OUTPUT matrix_1
+
+// Initially, the matrix will be:
+//   [ [0, 0, 0, 0], 
+//     [0, 0, 0, 0], 
+//     [0, 0, 0, 0] ]
+
+// --------------------------------------------------
+
+
+// STORING DATA - METHOD # 1: DIRECT INITIALIZATION
+
+matrix_1 ← [
+    [1, 3, 5, 7],
+    [2, 4, 6, 8],
+    [3, 6, 9, 12]
+]
+
+// OUTPUT matrix_1 after initialization
+OUTPUT "Updated matrix_1:"
+OUTPUT matrix_1
+
+// Now the matrix contains:
+//   [ [1, 3, 5, 7], 
+//     [2, 4, 6, 8], 
+//     [3, 6, 9, 12] ]
+
+// --------------------------------------------------
+// STORING DATA - METHOD # 2: ASSIGNING VALUES USING INDEXES
+
+// Declaring another matrix
+DECLARE matrix_2 : ARRAY[1:3, 1:4] OF INTEGER
+
+// OUTPUT empty matrix_2
+OUTPUT "Initial matrix_2:"
+OUTPUT matrix_2
+
+// Initially, matrix_2 is filled with zeros:
+//   [ [0, 0, 0, 0], 
+//     [0, 0, 0, 0], 
+//     [0, 0, 0, 0] ]
+
+// Assigning values using row and column indexes
+matrix_2[2,3] <- 8
+OUTPUT "After assigning matrix_2[2,3] ← 8:"
+OUTPUT matrix_2
+
+matrix_2[1,1] <- 1
+OUTPUT "After assigning matrix_2[1,1] ← 1:"
+OUTPUT matrix_2
+
+matrix_2[1,2] <- 3
+OUTPUT "After assigning matrix_2[1,2] ← 3:"
+OUTPUT matrix_2
+
+matrix_2[3,4] <- 9
+OUTPUT "After assigning matrix_2[3,4] ← 9:"
+OUTPUT matrix_2
+
+// Final matrix_2:
+//   [ [1, 3, 0, 0], 
+//     [0, 0, 8, 0], 
+//     [0, 0, 0, 9] ]
+
+// --------------------------------------------------

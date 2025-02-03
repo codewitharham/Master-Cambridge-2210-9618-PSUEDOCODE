@@ -1,0 +1,79 @@
+// # Declare Arrays and Variables
+
+DECLARE Rooms : ARRAY[1:20] OF STRING  
+DECLARE Dimensions : ARRAY[1:20, 1:3] OF REAL  
+DECLARE Number, i, j : INTEGER  
+DECLARE Length, Width, Area, TotalSize, AvgArea, Temp: REAL
+DECLARE RoomName, TempName: STRING
+
+// # Initialize Variables
+TotalSize <- 0
+
+// # Input and Validate the Number of Rooms
+REPEAT
+    OUTPUT "Enter the number of rooms (between 3 and 20): "
+    INPUT Number
+UNTIL Number >= 3 AND Number <= 20  # Ensures valid input
+
+// # Collect Room Data (Name, Length, Width) and Compute Area
+
+FOR i <- 1 TO Number
+    OUTPUT "Enter Room Name: "
+    INPUT RoomName
+    Rooms[i] <- RoomName  # Store room name
+
+    OUTPUT "Enter Room " & NUM_TO_STR(i) & " Length in metres(m): "
+    INPUT Length
+
+    OUTPUT "Enter Room " & NUM_TO_STR(i) & " Width in metres(m): "
+    INPUT Width
+
+    Area <- ROUND((Length * Width), 2)  // Calculate area and round to 2 decimal places
+
+    // # Store values in the Dimensions array
+
+    Dimensions[i, 1] <- Length
+    Dimensions[i, 2] <- Width
+    Dimensions[i, 3] <- Area
+
+    TotalSize <- TotalSize + Area  
+NEXT
+
+
+AvgArea <- ROUND(TotalSize / Number, 2)
+
+// # Sort Rooms by Area using Bubble Sort
+
+FOR i <- 1 TO Number - 1
+    FOR j <- 1 TO Number - i
+        IF Dimensions[j, 3] > Dimensions[j + 1, 3] THEN
+            // # Swap all three values (Length, Width, Area)
+
+            FOR data <- 1 TO 3
+                Temp <- Dimensions[j, data]
+                Dimensions[j, data] <- Dimensions[j + 1, data]
+                Dimensions[j + 1, data] <- Temp
+            NEXT
+            
+            // # Swap Room Names to Keep Data Consistent
+            TempName <- Rooms[j]
+            Rooms[j] <- Rooms[j + 1]
+            Rooms[j + 1] <- TempName
+        ENDIF
+    NEXT
+NEXT
+
+// # Output All Rooms and Their Dimensions
+OUTPUT "Room Details:"
+FOR i <- 1 TO Number
+    OUTPUT "Room: " & Rooms[i] & ", Length: " & NUM_TO_STR(Dimensions[i,1]) & 
+    "m, Width: " & NUM_TO_STR(Dimensions[i,2]) & "m, Area: " & NUM_TO_STR(Dimensions[i,3]) & "m²"
+NEXT
+
+// # Output the Largest and Smallest Room
+OUTPUT "The Largest Room is: " & Rooms[Number] & " with Area: " & NUM_TO_STR(Dimensions[Number,3]) & "m²"
+OUTPUT "The Smallest Room is: " & Rooms[1] & " with Area: " & NUM_TO_STR(Dimensions[1,3]) & "m²"
+
+// # Output Total and Average Area
+OUTPUT "The Total Area of the House is: " & NUM_TO_STR(TotalSize) & "m²"
+OUTPUT "The Average Room Size is: " & NUM_TO_STR(AvgArea) & "m²"

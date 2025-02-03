@@ -1,0 +1,26 @@
+
+DECLARE Result : INTEGER
+
+FUNCTION First(n1: INTEGER) RETURNS INTEGER
+    
+    RETURN Second(n1) + (Second(n1) - 1)
+ENDFUNCTION
+
+FUNCTION Second(n2: INTEGER) RETURNS INTEGER
+    RETURN Third(n2) + (Third(n2) - 1)
+ENDFUNCTION
+
+FUNCTION Third(n3: INTEGER) RETURNS INTEGER
+  
+    RETURN Fourth(n3) + (Fourth(n3) - 1)
+ENDFUNCTION
+
+FUNCTION Fourth(n4: INTEGER) RETURNS INTEGER
+
+    RETURN n4 + 1
+ENDFUNCTION 
+
+Result <- First(1)
+OUTPUT "The Result has value:", Result
+
+

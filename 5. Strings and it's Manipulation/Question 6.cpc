@@ -1,3 +1,21 @@
-// Replace all occurrences of a specific character in a string with another character using their ASCII values.
+DECLARE input_string : STRING
+DECLARE step_size : INTEGER
+DECLARE result_string : STRING
 
+// Take input from the user
+OUTPUT "Enter a string: "
+INPUT input_string
 
+OUTPUT "Enter step size: "
+INPUT step_size
+
+// Initialize result string
+result_string ← ""
+
+// Extract characters based on step size
+FOR i ← 1 TO LENGTH(input_string) STEP step_size
+    result_string ← result_string & MID(input_string, i, 1)
+NEXT i
+
+// Output the result
+OUTPUT "Extracted characters: " & result_string

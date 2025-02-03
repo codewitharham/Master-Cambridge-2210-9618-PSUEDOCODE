@@ -67,3 +67,5 @@ FOR i ← 1 TO LENGTH(str4) STEP 5
     step_result5 ← step_result5 & MID(str4, i, 1)
 NEXT i
 OUTPUT "Step 5 result for 'ABCDEFGHIJKLM': " & step_result5   // Output: AFK
+
+
