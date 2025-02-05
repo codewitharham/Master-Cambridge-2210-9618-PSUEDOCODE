@@ -1,0 +1,27 @@
+// Write a pseudocode to search for a specific element in a 2D array. If the element exists, return its position, otherwise return "not found
+
+
+DECLARE myArr : ARRAY[1:2, 1:2] OF INTEGER
+DECLARE userInput: INTEGER
+DECLARE isPresent: BOOLEAN
+
+
+myArr <- [[10,20], [29, 10]]
+isPresent <- FALSE
+
+OUTPUT "Enter the number you want to search ? "
+
+INPUT userInput
+
+FOR row <- 1 TO 2
+    FOR column <- 1 TO 2
+        IF userInput = myArr[row,column] THEN
+            isPresent <- TRUE
+            OUTPUT "value found at row ",row," and column",column
+        ENDIF
+    NEXT column
+NEXT row
+
+IF isPresent = FALSE THEN
+    OUTPUT "Value not found, plz try again !"
+ENDIF

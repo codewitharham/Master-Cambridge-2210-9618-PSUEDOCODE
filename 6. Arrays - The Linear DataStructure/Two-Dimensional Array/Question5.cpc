@@ -1,0 +1,54 @@
+// Question:
+// Write a pseudocode to calculate the sum of each column in a given 2D array.
+
+// Problem:
+    // * Initialize the matrix with m rows and n columns.
+    // * Loop through each column (from 1 to n).
+    // * Initialize a variable columnSum to store the sum of the current column.
+    // * Loop through each row in the current column and add the element to columnSum.
+    // * Display the sum of each column after summing up its values.
+
+// Input Matrix (3 x 3 example):
+//          2   4   6
+//          1   3   5
+//          7   9   8
+
+// Row 1: 2 + 4 + 6 = 12
+// Row 2: 1 + 3 + 5= 9
+// Row 3: 7 + 9 + 8 = 24
+
+
+DECLARE row_UpperLimit: INTEGER
+DECLARE Column_UpperLimit: INTEGER
+DECLARE rowSum: INTEGER
+
+OUTPUT "Enter number of rows: "
+INPUT row_UpperLimit
+
+OUTPUT "Enter number of columns: "
+INPUT Column_UpperLimit
+
+DECLARE myArr: ARRAY[1:row_UpperLimit, 1:Column_UpperLimit] OF INTEGER
+DECLARE positionValue: INTEGER
+
+// Input values for the matrix
+
+FOR i <- 1 TO row_UpperLimit
+    FOR j <- 1 TO Column_UpperLimit
+        OUTPUT "Enter value for position (", i, ", ", j, "): "
+        INPUT positionValue
+        myArr[i, j] <- positionValue  
+    NEXT j
+NEXT i
+
+// Calculate and display sum of each row
+
+FOR row <- 1 TO row_UpperLimit
+    rowSum <- 0  // Reset sum for each row
+    
+    FOR column <- 1 TO Column_UpperLimit
+        rowSum <- rowSum + myArr[row, column]
+    NEXT column
+
+    OUTPUT "The sum for Row ", row, " is ", rowSum
+NEXT row
