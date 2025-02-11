@@ -1,0 +1,61 @@
+// Question:  
+// Write a pseudocode to compute the transpose of a given 2D matrix.  
+
+// Problem:  
+    // * Initialize a matrix with m rows and n columns.  
+    // * Create another matrix to store the transpose.  
+    // * Loop through each row (from 1 to m).  
+    // * Loop through each column (from 1 to n).
+    // * Display the transposed matrix after swapping all elements.  
+
+// Input Matrix (3 x 3 example):  
+//          1   2   3  
+//          4   5   6  
+//          7   8   9  
+
+// Transposed Matrix (Swapping Rows with Columns):  
+//          1   4   7  
+//          2   5   8  
+//          3   6   9 
+
+DECLARE Limit_Rows: INTEGER
+DECLARE Limit_Columns: INTEGER
+
+OUTPUT "Enter number of rows"
+INPUT Limit_Rows
+
+OUTPUT "Enter number of Columns"
+INPUT Limit_Columns
+
+OUTPUT Limit_Rows,Limit_Columns
+
+DECLARE originalMatrix: ARRAY[1:Limit_Rows, 1:Limit_Columns] OF INTEGER
+DECLARE transposeMatrix : ARRAY[1:Limit_Columns, 1:Limit_Rows] OF INTEGER
+
+DECLARE PositionValue: INTEGER
+
+FOR rows <- 1 TO Limit_Rows
+
+    FOR columns <- 1 TO Limit_Columns
+
+        OUTPUT "Enter value for position (", rows, ", ", columns, "): "
+        INPUT PositionValue
+        originalMatrix[rows,columns] <- PositionValue
+        
+    NEXT columns
+NEXT rows
+
+OUTPUT originalMatrix
+
+
+FOR i <- 1 TO Limit_Rows
+
+    FOR j <- 1 TO Limit_Columns
+
+        transposeMatrix[j,i] <- originalMatrix[i,j]
+        
+    NEXT j
+    
+NEXT i
+
+OUTPUT transposeMatrix

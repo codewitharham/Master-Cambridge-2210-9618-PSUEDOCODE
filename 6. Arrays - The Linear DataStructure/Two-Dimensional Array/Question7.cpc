@@ -1,0 +1,64 @@
+// Question:  
+// Write a pseudocode to find the maximum and minimum elements in a given 5×5 matrix.  
+
+// Problem:  
+    // * Initialize a 5×5 matrix.  
+    // * Input values for each element in the matrix.  
+    // * Set initial max and min values to the first element of the matrix.  
+    // * Loop through each row and column to compare values:  
+        //   - If an element is greater than max, update max.  
+        //   - If an element is smaller than min, update min.  
+    // * Display the maximum and minimum elements found in the matrix.  
+
+// Input Matrix (5×5 example):  
+//          12   45   67   89   34  
+//          90   23   56   78   21  
+//          65   98   32   11   43  
+//          29   61   75   84   92  
+//          14   87   30   55   49  
+
+// Maximum Element: 98  
+// Minimum Element: 11  
+
+
+DECLARE myArr : ARRAY[1:5, 1:5] OF INTEGER
+DECLARE indexValue: INTEGER
+DECLARE PositionValue: INTEGER
+DECLARE temp: INTEGER
+
+DECLARE maximumNum: INTEGER
+DECLARE minimumNum: INTEGER
+
+
+// * Ask the user to input a 3×4 matrix.
+// * Store the input value to array
+FOR row <- 1 TO 3
+    FOR column <- 1 TO 3
+
+        OUTPUT "Enter value for position (", row, ", ", column, "): "
+        INPUT PositionValue
+        myArr[row,column] <- PositionValue
+    
+    NEXT column
+NEXT row
+
+maximumNum <- myArr[1,1]
+minimumNum <- myArr[1,1]
+
+FOR i <- 1 TO 3
+    FOR j <- 1 TO 3
+
+        IF maximumNum < myArr[i,j] THEN
+            maximumNum <- myArr[i,j]            
+        ENDIF
+
+        IF minimumNum > myArr[i,j] THEN
+            minimumNum <- myArr
+        
+        ENDIF
+        
+    NEXT j
+NEXT i
+
+OUTPUT "Maximun Element is", maximumNum
+OUTPUT "Minimum Element is", minimumNum
